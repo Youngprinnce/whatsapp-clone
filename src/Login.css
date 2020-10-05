@@ -26,3 +26,7 @@
     background-color: #0a8d48;
     color: white;
 }
+
+.login__container > button:hover{
+    background-color: #52c387;
+}

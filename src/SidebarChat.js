@@ -1,10 +1,11 @@
 import React,{useState, useEffect} from 'react'
 import "./SidebarChat.css"
+import $ from "jquery"
 import { Avatar } from "@material-ui/core"
 import {db }from "./firebase"
 import {Link} from "react-router-dom"
 
-function SidebarChat({id, name, addNewChat}) {
+function SidebarChat({ id, name, addNewChat }) {
 
     const [seed, setSeed] = useState()
     const [messages, setMessages] = useState("")
@@ -27,6 +28,13 @@ function SidebarChat({id, name, addNewChat}) {
     useEffect(() => {
         setSeed(Math.floor(Math.random() * 500))
     }, [])
+
+    // useEffect(() => {
+    //     $(".sidebarChat").on("click", function () {
+    //         $(this).parent().parent().parent().css("display", "none");
+    //         $(".chat").css("display", "block")
+    //     })
+    // })
 
     const createChat = () => {
         const roomName = prompt("Please enter name for chat room");

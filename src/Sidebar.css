@@ -56,3 +56,15 @@
     background-color: white;
     overflow: scroll;
 }
+
+
+@media screen and (max-width: 830px) {
+  .sidebar {
+    flex: 1;
+    display: flex;
+    background-color: #ededed;
+    height:90vh;
+    width: 90vw;
+    box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.75);
+  }
+}

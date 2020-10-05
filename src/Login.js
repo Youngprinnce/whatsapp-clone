@@ -13,7 +13,6 @@ function Login() {
     const signIn = () => {
         auth.signInWithPopup(provider)
             .then(result => {
-                console.log(result)
                 return (
                     setUser(result)
             )})
@@ -24,7 +23,7 @@ function Login() {
             <div className="login__container">
                 <img src="" alt="" />
                 <div className="login__Text">
-                    <h1>Sign in to Whatsapp</h1>
+                    <h1>Sign in to WhatsApp</h1>
                 </div>
 
                 <Button onClick={signIn}>

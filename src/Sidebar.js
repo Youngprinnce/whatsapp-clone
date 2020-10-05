@@ -8,6 +8,7 @@ import "./Sidebar.css"
 import SidebarChat from './SidebarChat';
 import { db } from "./firebase"
 import { StateContext } from './StateProvider';
+import $ from "jquery"
 
 
 function Sidebar() {
@@ -28,6 +29,8 @@ function Sidebar() {
             }))
         )})
     }, [])
+
+ 
     return (
         <div className="sidebar">
             <div className="sidebar__header">
