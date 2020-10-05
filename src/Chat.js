@@ -8,8 +8,6 @@ import MicIcon from "@material-ui/icons/Mic"
 import { db  } from "./firebase"
 import { StateContext } from './StateProvider';
 import firebase from "firebase"
-import $ from "jquery"
-
 
 function Chat() {
     const [input, setInput] = useState("");
@@ -53,13 +51,7 @@ function Chat() {
             setSeed(Math.floor(Math.random() * 500))
     }, [roomname])
 
-    // useEffect(() => {
-    //     if (window.screen.width < "830") {
-    //            $(".chat").css("display", "none")
-    //       }
-    // })
-
-    
+ 
     const sendMessage = async (e) => {
         e.preventDefault();
         const message = {

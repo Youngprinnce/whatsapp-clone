@@ -1,6 +1,5 @@
 import React,{useState, useEffect} from 'react'
 import "./SidebarChat.css"
-import $ from "jquery"
 import { Avatar } from "@material-ui/core"
 import {db }from "./firebase"
 import {Link} from "react-router-dom"
@@ -29,13 +28,6 @@ function SidebarChat({ id, name, addNewChat }) {
         setSeed(Math.floor(Math.random() * 500))
     }, [])
 
-    // useEffect(() => {
-    //     $(".sidebarChat").on("click", function () {
-    //         $(this).parent().parent().parent().css("display", "none");
-    //         $(".chat").css("display", "block")
-    //     })
-    // })
-
     const createChat = () => {
         const roomName = prompt("Please enter name for chat room");
         if (roomName) {
@@ -46,6 +38,8 @@ function SidebarChat({ id, name, addNewChat }) {
                 });
         }
     }
+
+    
     return !addNewChat ? (
         <Link to={`/rooms/${id}`}>
             <div className="sidebarChat">

@@ -8,8 +8,6 @@ import "./Sidebar.css"
 import SidebarChat from './SidebarChat';
 import { db } from "./firebase"
 import { StateContext } from './StateProvider';
-import $ from "jquery"
-
 
 function Sidebar() {
     const [rooms, setRooms] = useState([])
